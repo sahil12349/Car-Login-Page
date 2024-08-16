@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Animation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="content">
+        <div class="login-card">
+            <h2><i class="fas fa-user-circle"></i> Login</h2>
+            <form action="#">
+                <div class="input-container">
+                    <input type="text" id="username" name="username" placeholder="Username" required>
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="input-container">
+                    <input type="password" id="password" name="password" placeholder="Password" required>
+                    <i class="fas fa-lock"></i>
+                </div>
+                <div class="input-container" style="display: flex;  flex-direction: row; margin-left: 120px;">
+                    <input type="checkbox" id="remember" name="remember" style="width: 15px; height: 40px; margin-right: 8px;">
+                    <p>Remember Password</p>
+                </div>
+                <button type="submit" style="font-weight: bold;">Login</button>
+            </form>
+            <p>Don't have an account? <a href="#">Register here</a></p>
+        </div>
+    </div>
+    <div class="car-container">
+        <div class="car" id="car">
+            <img src="car.png" alt="Car" style="width: 500px;">
+            <img src="tire.png" alt="Front Tire" class="tire front-tire">
+            <img src="tire.png" alt="Back Tire" class="tire back-tire">
+        </div>
+        <div class="car2" id="car2">
+            <img src="car2.png" alt="Car" style="width: 500px;">
+            <img src="tire2.png" alt="Front Tire" class="tire2 front-tire2">
+            <img src="tire2.png" alt="Back Tire" class="tire2 back-tire2">
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

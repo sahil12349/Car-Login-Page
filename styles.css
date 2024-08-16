@@ -1,0 +1,170 @@
+body {
+  margin: 0;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: url('BG.jpg');
+  background-size: cover;
+}
+
+.login-card {
+  margin-top: 40px;
+  background: transparent;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  width: 320px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.login-card h2 {
+  margin-bottom: 10px;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.login-card form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.input-container {
+  position: relative;
+  width: 100%;
+  margin-bottom: 12px;
+}
+
+.input-container input {
+  width: 90%;
+  padding: 10px;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  outline: none;
+  background: none;
+  font-size: 16px;
+}
+
+.input-container i {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+}
+
+.login-card button {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 12px;
+  background-color: white;
+  color: black;
+  border: none;
+  border-radius: 40px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.login-card button:hover {
+  background-color: #45a049;
+  color: white;
+}
+
+a{
+  text-decoration: none;
+  color: white;
+}
+p{
+  color: white;
+}
+.car-container {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-top: 20px;
+}
+
+.car, .car2 {
+  position: absolute;
+  padding-bottom: 18px;
+  width: 500px;
+  bottom: 0;
+}
+
+.car {
+  left: calc(30vw - 250px);
+  animation: drive 5s linear 1 forwards;
+}
+
+.car2 {
+  left: calc(70vw - 250px);
+  animation: drive2 5s linear 1 forwards;
+}
+
+.tire, .tire2 {
+  position: absolute;
+  width: 60px;
+  animation: rotate 1s linear infinite;
+}
+
+.front-tire {
+  bottom: 10px;
+  left: 143px;
+}
+
+.back-tire {
+  bottom: 10px;
+  left: 323px;
+}
+
+.front-tire2 {
+  bottom: 10px;
+  left: 117px;
+}
+
+.back-tire2 {
+  bottom: 10px;
+  left: 296px;
+}
+
+.pause-animation {
+  animation-play-state: paused !important;
+}
+
+@keyframes drive {
+  0% {
+      left: -500px;
+  }
+  100% {
+      left: calc(30vw - 250px);
+  }
+}
+
+@keyframes drive2 {
+  0% {
+      left: 100%;
+  }
+  100% {
+      left: calc(70vw - 250px);
+  }
+}
+
+@keyframes rotate {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+}
